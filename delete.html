@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DNSC Library - Delete Book</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+      <div class="container-fluid">
+        <a class="navbar-brand">Davao del Norte State College Library</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="books.html">Book List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="add.html">Add Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="edit.html">Edit Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="delete.html">Delete Book</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+  <div class="card shadow-lg p-5 rounded-4 border-0">
+    <h2 class="text-center text-success mb-4">🗑️ Delete Book</h2>
+    <form id="deleteBookForm" onsubmit="return confirmDelete()">
+      <div class="mb-3">
+        <label for="bookId" class="form-label text-danger fw-semibold">📚 Book ID</label>
+        <input
+          type="text"
+          class="form-control"
+          id="bookId"
+          placeholder="Enter Book ID"
+          required
+        />
+        <div id="bookIdHelp" class="form-text text-danger"></div>
+      </div>
+      <div class="mb-3">
+        <label for="title" class="form-label text-danger fw-semibold">📖 Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          placeholder="Enter Book Title"
+          required
+        />
+        <div id="titleHelp" class="form-text text-danger"></div>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-outline-danger px-5 py-2 rounded-pill fw-bold shadow-sm">
+          🗑️ Delete Book
+        </button>
+      </div>
+    </form>
+
+    <div
+      id="successMessage"
+      class="mt-4 alert alert-success text-center"
+      style="display: none"
+    >✅ Book successfully deleted.</div>
+
+    <div
+      id="errorMessage"
+      class="mt-4 alert alert-danger text-center"
+      style="display: none"
+    >❌ Error deleting the book. Please try again.</div>
+  </div>
+</div>
+
+  <br /><br /><br /><br /><br /><br />
+  <footer class="custom-footer text-white py-3 mt-5">
+    <div class="container text-center">
+      <p>&copy; 2025 Library Management System | ITELEC 1 Project</p>
+      <p>Prepared and submitted by:</p>
+      <div class="d-flex justify-content-center gap-4">
+        <p>RUZEL JHON Y AGAG</p>
+                <p>JOHN LORENS A BALDON</p>
+                <p>JON ARCELLE G GABAYA</p>
+                <p>KARYL R RODRIGUEZ</p>
+                <p>LYKKA I DELOS CIENTOS</p>
+                <p>KRISHA MAE L SARIO</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+  function confirmDelete() {
+    return confirm("⚠️ Are you sure you want to delete this book?");
+  }
+</script>
+</html>

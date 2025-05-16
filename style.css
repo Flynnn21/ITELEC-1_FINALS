@@ -1,0 +1,214 @@
+.hero {
+    background: linear-gradient(rgba(29, 93, 31, 0.8),
+            rgba(29, 93, 31, 0.8)),
+        url("images/lib.avif") center/cover no-repeat;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.feature {
+    flex: 1 1 300px;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.feature h4 {
+    color: #1d5d1f;
+}
+
+.introduction-section {
+    max-width: 800px;
+    margin: auto;
+}
+
+.introduction-section h2 {
+    font-size: 2rem;
+}
+
+.introduction-section p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.library-gif-section {
+    background: linear-gradient(to right, #e8f5e9, #f1f8e9);
+    border: 3px dashed #1d5d1f;
+}
+
+.gif-style {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gif-style:hover {
+    transform: scale(1.05);
+}
+
+.animated-text {
+    color: #1d5d1f;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+}
+
+.custom-footer {
+    background-color: rgba(29, 93, 31, 0.8);
+}
+
+.btn {
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #d4edda;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #1d5d1f;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 30px;
+    border-radius: 0;
+}
+
+/* Nav Links (All white text initially, including brand) */
+nav a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    position: relative;
+    padding: 10px 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+/* Hover Effects (excluding brand underline effect only) */
+nav a:not(.navbar-brand)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(to right, #43e97b, #38f9d7);
+    transition: width 0.6s ease-in-out;
+}
+
+nav a:not(.navbar-brand):hover::after {
+    width: 100%;
+}
+
+nav a:not(.navbar-brand):hover {
+    color: #43e97b !important;
+    transform: translateY(-2px);
+    text-shadow: 0 0 8px rgba(67, 233, 123, 0.6);
+}
+
+/* Brand - No Hover Effect */
+.navbar-brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff !important;
+    cursor: default;
+}
+
+/* Book list*/
+table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+thead.table-success th {
+    background: linear-gradient(90deg, #1d5d1f, #28a745);
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tbody tr:hover {
+    background-color: rgba(40, 167, 69, 0.1);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Table text */
+table td,
+table th {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Section Title */
+h2.text-success {
+    font-weight: bold;
+    border-bottom: 3px solid #1d5d1f;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tbody tr:hover {
+    background-color: rgba(40, 167, 69, 0.1);
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
+}
+
+tbody tr:hover {
+    background-color: rgba(40, 167, 69, 0.1);
+    transform: scale(1.01);
+    transition: 0.2s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
